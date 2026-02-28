@@ -21,12 +21,12 @@ public class CatTest {
         Feline feline = Mockito.mock(Feline.class);
 
         Mockito.when(feline.eatMeat())
-                .thenReturn(List.of("Животные"));
+                .thenReturn(List.of("Животные", "Птицы", "Рыба"));
 
         Cat cat = new Cat(feline);
 
         Assert.assertEquals(
-                List.of("Животные"),
+                List.of("Животные", "Птицы", "Рыба"),
                 cat.getFood()
         );
     }
